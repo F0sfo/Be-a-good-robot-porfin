@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+
 public class ScoreController : MonoBehaviour
 {
-
     public Text scoreText;
 
     private int score;
@@ -20,18 +20,18 @@ public class ScoreController : MonoBehaviour
         if (target.tag == "Bomb")
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
         }
-            
     }
 
     void OnTriggerExit2D(Collider2D target)
     {
-        if(target.tag == "Fruit")
+        if (target.tag == "Fruit")
         {
             Destroy(target.gameObject);
             score++;
         }
     }
 
-
 }
+

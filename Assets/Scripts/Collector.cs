@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class Collector : MonoBehaviour
 {
-    void OnTriggerEnter2D(Collider2D target)
+    private void OnTriggerEnter2D(Collider2D target)
     {
-        if(target.tag == "Fruit" || target.tag == "Bomb")
+        if (target.tag == "Fruit" || target.tag == "Bomb")
         {
             Destroy(target.gameObject);
         }
     }
-
 }
